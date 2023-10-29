@@ -76,13 +76,13 @@ function App() {
           <ul>
             {items.map((item, index) => (
               <Item
-                {...item}
-                key={item.id}
-                handleClick={createHandleRemoveItem(item.id)}
-                onDragStart={handleDragStart(index)}
-                onDrop={handleDrop(index)}
-                onDragOver={handleDragOver}
-              />
+              {...item}
+              key={item.id}
+              handleClick={createHandleRemoveItem(item.id)}
+              onDragStart={handleDragStart(index)}
+              onDrop={handleDrop(index)}
+              onDragOver={handleDragOver}
+            />
             ))}
           </ul>
         )}
