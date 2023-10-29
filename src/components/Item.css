@@ -1,23 +1,46 @@
+*{
+  box-sizing: border-box;
+}
 
-
+ul {
+  list-style: none;
+}
 
 .item-container {
+  font-size: 20px;
   display: flex;
   align-items: center; 
   justify-content: space-between; 
   border: 1px solid black; 
   border-radius: 8px;
-  padding: 10px; 
+  padding: 8px 5px 8px 40px; 
   margin: 5px 0; 
   background-color: #f5f5f5; 
+  cursor: grab; 
+  box-shadow: 2px 2px 5px rgba(236, 229, 229, 0.8); 
+  transition: background-color 0.3s; 
+  position: relative;
+}
+
+.item-container:hover {
+  background-color: #e8e8e8; 
+}
+
+.item-container:active {
+  cursor: grabbing; 
 }
 
 .b-delete {
-  background-color: rgb(109, 70, 70);
+  font-size: 12px;
+  background-color: rgb(109, 70, 70, 0.5);
   color: white;
   border: none;
-  padding: 4px 10px;
+  padding: 3px 8px;
   cursor: pointer;
   margin-left: 10px; 
   border-radius: 50%;
+  position: absolute; 
+  top: 3px;       
+  right: 3px;   
 }
+

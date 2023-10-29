@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { type Item } from "../App"
+import { Item } from "../App"
 
 
 export const useItems = () => {
@@ -28,12 +28,23 @@ export const useItems = () => {
       setItems ([]);
     }
 
+    const reorderItems = (startIndex: number, endIndex: number) => {
+      const result = Array.from(items);
+      const [removed] = result.splice(startIndex, 1);
+      result.splice(endIndex, 0, removed);
+  
+      setItems(result);
+  };
+
+
     return {
       items,
       addItem,
       removeItem,
-      emptylist
+      emptylist,
+      reorderItems 
     }
+    
 
 
 }
